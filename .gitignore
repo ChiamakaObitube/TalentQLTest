@@ -1,3 +1,4 @@
 .pytest_cache
 __pycache__
 .coverage
+ubiquitous-bassoon/vault-password.txt
