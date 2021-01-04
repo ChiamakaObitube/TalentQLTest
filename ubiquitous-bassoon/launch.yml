@@ -13,9 +13,6 @@
     - aws_keys.yml
 
   tasks:
-     - name: Include private key from Ansible Vault encrypted file.
-       include_vars: aws_keys.yml
-       when: not test_mode
      - name: Create a security group
        ec2_group:
         name: "{{ security_group }}"

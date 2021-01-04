@@ -7,6 +7,3 @@ install:
 - sudo apt install software-properties-common
 - sudo apt-add-repository --yes --update ppa:ansible/ansible
 - sudo apt install ansible
-# command to run tests
-script:
-- ansible-playbook -i hosts --ask-vault-pass ubiquitous-bassoon/launch.yml -v

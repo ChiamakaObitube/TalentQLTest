@@ -1,16 +1,16 @@
 # Technical Assessment for Devops Engineer
+* This repository is in fulfillment of the technical assessement test for the DevOps Engineer role at TalentQL
+## Task 1 : Write a python script, which will convert json files to xml files, encrypt and transfer it in a remote location.
+* The directory for the first task is contained in the jsontoxml directory.
+* CD into the jsontoxml directory.
+* Run ```docker-compose build ``` to build the containers
+* Run ```docker-compose up``` to run the container.
 
-## Task 1
-
-1. Write a python script, which will convert json files to xml files, encrypt and transfer it in a remote location.
-
-## Task 2
-1. Deploy apache on a cloud instance of your choice, verify you can access a working instance and tear down the entire infrastructure
+## Task 2: Deploy apache on a cloud instance of your choice, verify you can access a working instance and tear down the entire infrastructure
 
 # This tasks uses ansible to automate the deployment of apache server on an EC2 instance.
-* 
 
-* To run this, take the following steps:
+To run this, take the following steps:
 * clone the repository and cd into ubiquitous-bassoon directory 
 * Ensure that ansible is installed on the local server 
-* Run ```ansible-playbook -i hosts --ask-vault-pass launch.yml```
+* Run ```ansible-playbook launch.yml -i hosts --vault-password-file vault-password.txt```

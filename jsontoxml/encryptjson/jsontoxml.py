@@ -4,16 +4,6 @@ from json2xml import json2xml
 from json2xml.utils import readfromurl, readfromstring, readfromjson
 from cryptography.fernet import Fernet
 
-
- # create a directory for encryptedxml
-path = "jsontoxml/encryptedxml"
-try:
-    os.mkdir(path)
-except OSError:
-    print ("Creation of the directory %s failed" % path)
-else:
-    print ("Successfully created the directory %s " % path)
-
 data = readfromjson("encryptjson/sample.json")
 data_object = str((json2xml.Json2xml(data).to_xml()))
 # print(data_object)
