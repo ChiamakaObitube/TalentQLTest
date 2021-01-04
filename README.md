@@ -6,9 +6,7 @@
 * Run ```docker-compose build ``` to build the containers
 * Run ```docker-compose up``` to run the container.
 
-## Task 2: Deploy apache on a cloud instance of your choice, verify you can access a working instance and tear down the entire infrastructure
-
-# This tasks uses ansible to automate the deployment of apache server on an EC2 instance.
+## Task 2: This task uses ansible to automate the deployment of apache server on an EC2 instance.
 
 To run this, take the following steps:
 * clone the repository and cd into ubiquitous-bassoon directory 
