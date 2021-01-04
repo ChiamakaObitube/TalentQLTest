@@ -6,7 +6,7 @@ def load_key():
     """
     Loads the key from the current directory named `key.key`
     """
-    return open("jsontoxml/secret/key.key", "rb").read()
+    return open("encryptjson/secret/key.key", "rb").read()
 
 def decrypt(filename, key):
 
@@ -22,6 +22,6 @@ def decrypt(filename, key):
     #write_key()
 load_key()
 key = load_key()
-file = "jsontoxml/encryptedxml/data_object"
+file = "encryptjson/data_object"
 decrypt(file, key)
     

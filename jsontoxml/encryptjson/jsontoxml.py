@@ -14,16 +14,16 @@ except OSError:
 else:
     print ("Successfully created the directory %s " % path)
 
-data = readfromjson("jsontoxml/encryptjson/sample.json")
+data = readfromjson("encryptjson/sample.json")
 data_object = str((json2xml.Json2xml(data).to_xml()))
 # print(data_object)
 
-with open("jsontoxml/encryptedxml/data_object", "w") as file:
+with open("data_object", "w") as file:
     file.write(data_object)
 
 def write_key():
     # create a directory for secrets
-    path = "jsontoxml/secret"
+    path = "secret"
     try:
         os.mkdir(path)
     except OSError:
@@ -32,14 +32,14 @@ def write_key():
         print ("Successfully created the directory %s " % path)
     # generate key
     key = Fernet.generate_key()
-    with open("jsontoxml/secret/key.key", "wb") as key_file:
+    with open("secret/key.key", "wb") as key_file:
         key_file.write(key)
 
 def load_key():
     """
     Loads the key from the current directory named `key.key`
     """
-    return open("jsontoxml/secret/key.key", "rb").read()
+    return open("secret/key.key", "rb").read()
 
 def encrypt(filename, key):
 
@@ -54,6 +54,6 @@ def encrypt(filename, key):
     
 write_key()
 key = load_key()
-file = "jsontoxml/encryptedxml/data_object"
+file = "data_object"
 
 encrypt(file, key)

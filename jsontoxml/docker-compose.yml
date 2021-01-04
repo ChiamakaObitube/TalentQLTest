@@ -1,14 +1,20 @@
 version: '3.7'
+
+volumes:
+  sharedencryptvolume:
 services:
   service_encrypt:
     build: ./encryptjson
+    volumes:
+      - sharedencryptvolume:/home
 
   service_decrypt:
     build: ./xmldecrypt
+    depends_on:
+      - service_encrypt
     ports:
       - '8080:8080'
     volumes:
-      - /var/lib/docker/volumes/jsontoxmlvolume/_data:/home/secret
-      - /var/lib/docker/volumes/jsontoxmlvolume/_data:/home/encryptedxml
+      - sharedencryptvolume:/home/encryptjson
      
   
