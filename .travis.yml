@@ -1,0 +1,7 @@
+language: python
+python:
+  - "3.8.5"
+
+script:
+  - python3 jsontoxml.py
+  - python3 decryptxml.py
