@@ -1,7 +1,6 @@
 language: python
 python:
   - "3.8.5"
-
+# command to run tests
 script:
-  - python3 jsontoxml.py
-  - python3 decryptxml.py
+- ansible-playbook -i hosts --ask-vault-pass ubiquitous-bassoon/launch.yml -v
