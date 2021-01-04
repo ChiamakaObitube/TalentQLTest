@@ -1,4 +1,4 @@
-gitfrom cryptography.fernet import Fernet
+from cryptography.fernet import Fernet
 import base64
 import os
 
