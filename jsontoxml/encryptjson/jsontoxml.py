@@ -6,7 +6,6 @@ from cryptography.fernet import Fernet
 
 data = readfromjson("encryptjson/sample.json")
 data_object = str((json2xml.Json2xml(data).to_xml()))
-# print(data_object)
 
 with open("data_object", "w") as file:
     file.write(data_object)
