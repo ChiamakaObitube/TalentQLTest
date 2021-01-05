@@ -12,3 +12,5 @@ To run this, take the following steps:
 * clone the repository and cd into ubiquitous-bassoon directory 
 * Ensure that ansible is installed on the local server 
 * Run ```ansible-playbook launch.yml -i hosts --vault-password-file vault-password.txt```
+
+## Continuous integration with Travis CI
