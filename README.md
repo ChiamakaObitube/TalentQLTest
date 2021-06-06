@@ -1,5 +1,5 @@
 # Technical Assessment for Devops Engineer
-* This repository is in fulfillment of the technical assessement test for the DevOps Engineer role at TalentQL
+* This repository is in fulfillment of the technical assessement test for the DevOps Engineer role at TalentQL.
 ## Task 1 : Write a python script, which will convert json files to xml files, encrypt and transfer it in a remote location.
 * The directory for the first task is contained in the jsontoxml directory.
 * CD into the jsontoxml directory.
